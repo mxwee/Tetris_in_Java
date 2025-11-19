@@ -29,7 +29,7 @@ public class PlayManager {
     public static ArrayList<Block> staticBlocks = new ArrayList<>();
 
     // others
-    public static int dropInterval = 60; // mino drops in every 60 frames or 1 sec
+    public static int dropInterval = 45; // mino drops in every 60 frames or 1 sec
     boolean GameOver;
 
     // Effects
@@ -103,7 +103,7 @@ public class PlayManager {
             // check if the game is over
             if(currentMino.b[0].x == MINO_START_X && currentMino.b[0].y == MINO_START_Y){
                 // meaning currentMino immediately collided with current Mino and couldn't move
-                // and it's XY's are same as nextMino's
+                // and it's XYs are same as nextMino's
                 GameOver = true;
             }
 
@@ -158,7 +158,7 @@ public class PlayManager {
                     // Drop Speed
                     // if line score hits certain level increase drop speed
                     // 1 is the fastest
-                    if(lines % 10 == 10  && dropInterval > 1){
+                    if(lines % 10 == 0 && lines % 10 == 0 && dropInterval > 1){
                         level++;
 
                         if(dropInterval > 10){
@@ -183,8 +183,8 @@ public class PlayManager {
 
         // add score
         if(lineCount > 0){
-            int singelLineScore = 10 * level;
-            score += singelLineScore + lineCount;
+            int singleLineScore = 10 * level;
+            score += singleLineScore + lineCount;
         }
     }
 
