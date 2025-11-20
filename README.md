@@ -1,1 +1,4 @@
-Simple Java Project which focuses on writing the Tetris game. 
+Simple Java project that focuses on writing a Tetris game. 
+
+to run the game:
+`java -cp out/production/Tetris main.Main`
